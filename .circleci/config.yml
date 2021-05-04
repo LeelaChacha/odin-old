@@ -30,6 +30,6 @@ jobs:
 workflows:
   main:
     jobs:
-      - sconarcloud-scan:
+      - sonarcloud-scan:
           context: SonarCloud
       - run-python-script
