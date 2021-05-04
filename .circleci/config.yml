@@ -8,7 +8,9 @@ jobs:
     executor: python/default
     steps:
       - checkout
+      - python/load-cache
       - python/install-deps
+      - python/save-cache
       - run:
           command: python ./odin/odin.py
           name: Run Script
