@@ -1,11 +1,23 @@
 version: 2.1
 
 orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.1
   python: circleci/python@0.2.1
 
 jobs:
+  sonarcloud-scan:
+    docker:
+      - image: 'circleci/python:latest'
+    steps:
+      - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - sonarcloud/scan
+
   run-python-script:
-    executor: python/default
+    docker:
+      - image: 'circleci/python:latest'
     steps:
       - checkout
       - python/load-cache
@@ -18,4 +30,6 @@ jobs:
 workflows:
   main:
     jobs:
+      - sconarcloud-scan:
+          context: SonarCloud
       - run-python-script
