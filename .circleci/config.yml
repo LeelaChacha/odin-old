@@ -8,9 +8,7 @@ jobs:
     executor: python/default
     steps:
       - checkout
-          name: Checkout Repo
       - python/install-deps
-          name: Install Python Dependencies
       - run:
           command: python ./odin/odin.py
           name: Run Script
