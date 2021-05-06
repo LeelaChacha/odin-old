@@ -102,7 +102,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-Environments/
 .env
 .venv
 env/
@@ -128,6 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pycharm
+.idea/
 
 # SonarLint Folder
 .sonarlint/
