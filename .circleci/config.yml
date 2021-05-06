@@ -16,6 +16,7 @@ jobs:
       - sonarcloud/scan
 
   run-python-script:
+    working_directory: "./odin/"
     docker:
       - image: 'circleci/python:latest'
     steps:
@@ -24,7 +25,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: python3 ./odin/main.py
+          command: python ./main.py
           name: Run Script
 
 workflows:
