@@ -1,8 +1,8 @@
 import datetime
 import sqlite3
 
-from odin.database.base import IRecord
-from odin.database.helpers.pathfinder import PathFinder
+from odin.record.base import IRecord
+from odin.record.helpers.pathfinder import PathFinder
 
 
 class LocalRecord(IRecord):
