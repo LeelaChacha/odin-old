@@ -16,7 +16,7 @@ jobs:
       - sonarcloud/scan
 
   run-python-script:
-    working_directory: "./odin/"
+    working_directory: ./odin
     docker:
       - image: 'circleci/python:latest'
     steps:
