@@ -1,4 +1,4 @@
-from odin.database.local import LocalRecord
+from odin.record.local import LocalRecord
 
 
 if __name__ == "__main__":
