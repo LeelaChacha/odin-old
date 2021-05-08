@@ -24,7 +24,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: python ./odin/main.py
+          command: python main.py
           name: Run Script
 
 workflows:
